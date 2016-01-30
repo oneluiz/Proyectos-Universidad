@@ -3,11 +3,11 @@
  * Era mas facil crear esto en php :-)
  */
 
-package test;
+package calculadora;
 
 import java.util.Scanner;
 
-public class Main {
+public class Calculadora {
 	static Scanner scanner = new Scanner(System.in); // Sirve para recoger texto por consola :-)
 	static int opcion = -1; //opción elegida del usuario en el momento de hacer el calculo
 	static int numero1 = 0, numero2 = 0, numero3 = 0;//Variables

@@ -10,11 +10,10 @@ package ejercicio;
  * @author laboratorio
  */
 import java.util.Scanner;
+
 public class Ejercicio {
     static Scanner entrada = new Scanner(System.in);
-    static public int valor = 0;
-    static public int b =0;
-    static public int c =0;
+    static public int valor = 0, b = 0, c = 0, d= 0;
 
     /**
      * @param args the command line arguments
@@ -30,15 +29,16 @@ public class Ejercicio {
                 b = valor + v;
                 System.out.println("valor es ("+b+")");
             }
+  
             if(v == 7){
                 c = valor + v;
                 System.out.println("valor es ("+c+")");
             }
+
             if(v == 9){
-                int d = b + c;
+                d = b + c;
                 System.out.println("la suma de los valores es ("+d+")");
             }
         }
     }
-    
 }

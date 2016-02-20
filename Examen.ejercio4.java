@@ -32,33 +32,45 @@ public class Examen4 {
             // Sin descuento
             System.out.println("Monto a pagar $"+compra);
         }else if(compra >= 500 && compra <= 1000){
+            
             // descuento 5%
             int Des = compra*des5/100;
             int total = compra-Des;
+            
             System.out.println("Descuento del %"+ des5);
             System.out.println("Descuento $"+ Des);
             System.out.println("Monto a pagar $"+ total);
+            
         }else if(compra > 1000 && compra <= 7000){
+            
             // descuento 10%
             int Des = compra*des10/100;
             int total = compra-Des;
+            
             System.out.println("Descuento del %"+ des10);
             System.out.println("Descuento $"+ Des);
             System.out.println("Monto a pagar $"+ total);
+            
         }else if(compra > 7000 && compra <= 15000){
+            
             // descuento 20%
             int Des = compra*des20/100;
             int total = compra-Des;
+            
             System.out.println("Descuento del %"+ des20);
             System.out.println("Descuento $"+ Des);
             System.out.println("Monto a pagar $"+ total);
+            
         }else if(compra > 15000){
+            
             // descuento 25%
             int Des = compra*des25/100;
             int total = compra-Des;
+            
             System.out.println("Descuento del %"+ des25);
             System.out.println("Descuento $"+ Des);
             System.out.println("Monto a pagar $"+ total);
+            
         }else{
             System.out.println("Ha ocurrido un error en el sistema");
         }

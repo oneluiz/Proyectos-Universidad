@@ -1,11 +1,11 @@
-package proyecto;
+package proyectoulatina;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Luis
  */
-public class Proyecto {
+public class ProyectoUlatina {
 
     public static void main(String[] args) {
         // variables
@@ -35,9 +35,9 @@ public class Proyecto {
                 }
             }catch(NumberFormatException e ){
                 JOptionPane.showMessageDialog(null, "Debe de ingresar solo caracteres numericos.", "Seguro que deseas salir de la aplicación", JOptionPane.ERROR_MESSAGE);
-                
+
                 // Solicitud para salir del sistema
-                if (JOptionPane.showConfirmDialog(null, "¿Quieres Salir del sistema?", "Salir del Sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+                if (JOptionPane.showConfirmDialog(null, "Universidad Latina"+NuevaLinea+"Desarrollado por: Luis Cortés Juárez."+NuevaLinea+"¿Quieres Salir del sistema?", "Salir del Sistema | Ulatina", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                     System.exit(0);
                 }
             }

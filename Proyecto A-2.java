@@ -1,11 +1,11 @@
-package proyectoulatina;
-import javax.swing.JOptionPane;
+package proyecto;
+import javax.swing.JOptionPane;;
 
 /**
  *
  * @author Luis
  */
-public class ProyectoUlatina {
+public class Proyecto{
 
     public static void main(String[] args) {
         // variables
@@ -21,7 +21,7 @@ public class ProyectoUlatina {
 
         do{
             try{
-                dia = Integer.parseInt(JOptionPane.showInputDialog("Digite los días que desea validar",null));
+                dia = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite los días que desea validar", "ULatina | Luis Cortés", JOptionPane.PLAIN_MESSAGE));
                 if(dia < semana ){
                     JOptionPane.showMessageDialog(null, "El número de dias ingresado es menor a la cantidad permitida, la cantidad minima es 7.", "No puedes Ingresar esa cantidad de días", JOptionPane.WARNING_MESSAGE);
                 }else{

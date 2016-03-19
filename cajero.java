@@ -23,16 +23,17 @@ public class CajeroATH {
         int opcion = 0;
         int retiro = 0;
         int deposito = 0;
+        int NuevaPass= 0;
         
         //Propiedad del sistema para salto de línea:
         String NuevaLinea = System.getProperty("line.separator");
         do{
             try{
                 pass = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su clave", "Cajero ULatina | Luis Cortés", JOptionPane.PLAIN_MESSAGE));
-                if(clave == pass ){
+                if(clave == pass){
                     boolean salir = false;
                     do{
-                       opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite una de la iguientes opciones"+NuevaLinea+"1) Consultar saldo de la Cuenta"+NuevaLinea+"2) Retirar Dinero de la Cuenta"+NuevaLinea+"3) Depositar Dinero a la Cuenta"+NuevaLinea+"4) Terminar Operación", "Cajero ULatina | Luis Cortés", JOptionPane.PLAIN_MESSAGE));
+                       opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite una de la iguientes opciones"+NuevaLinea+"1) Consultar saldo de la Cuenta"+NuevaLinea+"2) Retirar Dinero de la Cuenta"+NuevaLinea+"3) Depositar Dinero a la Cuenta"+NuevaLinea+"4) Cambiar Contraseña"+NuevaLinea+"5) Terminar Operación", "Cajero ULatina | Luis Cortés", JOptionPane.PLAIN_MESSAGE));
                         switch(opcion){
                             case 1:
                                 JOptionPane.showMessageDialog(null, "El saldo de su cuenta es de ¢ "+saldo+"", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE);
@@ -49,19 +50,22 @@ public class CajeroATH {
                                 }while(saldo<retiro);
                             break;
                             case 3:
-                                do{
-                                    deposito = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Cuanto es el monto que desea depositar?", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE));
-                                    int SaldoActual = saldo+deposito;
-                                    JOptionPane.showMessageDialog(null, "Haz realizado un depostio de "+deposito+" y saldo actual es  de ¢ "+SaldoActual+"", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE);
-                                }while(saldo<retiro);
+                                deposito = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Cuanto es el monto que desea depositar?", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE));
+                                int SaldoActual = saldo+deposito;
+                                JOptionPane.showMessageDialog(null, "Haz realizado un depostio de "+deposito+" y saldo actual es  de ¢ "+SaldoActual+"", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE);
                             break;
                             case 4:
+                                NuevaPass = Integer.parseInt(JOptionPane.showInputDialog(null, "¿Cual es la nueva contraseña?", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE));
+                                JOptionPane.showMessageDialog(null, "Su nueva contraseña es "+NuevaPass+".", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE);
+                            break;
+                            case 5:
                                 // Solicitud para salir del sistema
                                 if (JOptionPane.showConfirmDialog(null, "Universidad Latina"+NuevaLinea+"Desarrollado por: Luis Cortés Juárez."+NuevaLinea+"¿Quieres Salir del sistema?", "Salir del Sistema | Ulatina", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
                                     System.exit(0);
                                 }
                             break;
                             default:
+                                JOptionPane.showMessageDialog(null, "Ingresa una opcion del menu", "Cajero ULatina | Saldo Cuenta", JOptionPane.PLAIN_MESSAGE);
                             break;
                         }
                     }while(!salir);
@@ -78,5 +82,4 @@ public class CajeroATH {
             }
         }while(clave != pass );
     }
-    
 }

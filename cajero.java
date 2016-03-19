@@ -24,6 +24,8 @@ public class CajeroATH {
         int retiro = 0;
         int deposito = 0;
         int NuevaPass= 0;
+        int contador = 3;
+        int n = 1;
         
         //Propiedad del sistema para salto de línea:
         String NuevaLinea = System.getProperty("line.separator");
@@ -70,7 +72,14 @@ public class CajeroATH {
                         }
                     }while(!salir);
                 }else{
-                    JOptionPane.showMessageDialog(null, "Su clave es incorrecta o no acepta letras como contraseña", "No puedes ingresar ese tipo de datos", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Su clave es incorrecta o no acepta letras como contraseña, te quedan "+contador+" intentos", "No puedes ingresar ese tipo de datos", JOptionPane.WARNING_MESSAGE);
+
+                    n = n+1;
+                    --contador;
+                    if(n > 3){
+                        JOptionPane.showMessageDialog(null, "Se ha bloqueado el acceso", "Acceso Bloqueado", JOptionPane.ERROR_MESSAGE);
+                        System.exit(0);
+                    }
                 }
             }catch(NumberFormatException e ){
                 JOptionPane.showMessageDialog(null, "Debe de ingresar solo caracteres numericos.", "Seguro que deseas salir de la aplicación", JOptionPane.ERROR_MESSAGE);

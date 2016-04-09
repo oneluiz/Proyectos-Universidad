@@ -1,5 +1,5 @@
 package proyecto;
-import javax.swing.JOptionPane;;
+import javax.swing.JOptionPane;
 
 /**
  *

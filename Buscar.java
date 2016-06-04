@@ -1,4 +1,4 @@
- public void buscar_arreglo(){
+    public void buscar_arreglo(){
         String cod = JOptionPane.showInputDialog("DIGITE EL CONSEGUTIVO A BUSCAR");
         if(cod.equals("") || cod.equals("null")){
             JOptionPane.showMessageDialog(null, "DIGITE UN DATO","OPERACION CANCELAR",JOptionPane.ERROR_MESSAGE);
@@ -17,3 +17,14 @@
             }
         }
     }
+    
+        int consecutivo = 0;
+    String cedula ="";
+    String nombre ="";
+    String apellidos="";
+    public int getConsecutivo() {
+        return consecutivo;
+    }
+
+    public void setConsecutivo(int consecutivo) {
+        this.consecutivo = consecutivo;
